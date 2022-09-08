@@ -7,8 +7,20 @@
  * 
 */
 
-function factorial(n) {
-    // Напишите код здесь
+function factorial (n) {
+    let result = 1;
+    if (n < 0) {
+        return false;
+    } if (n === 1 || n === 0) {
+        return result;
+    } if (n % n === 0 && n > 1) {
+    for(let i = 2; i <= n; i++) {
+       result = result * i;
+    }
+    return result;
+    } else {
+    return false;
+    }
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
