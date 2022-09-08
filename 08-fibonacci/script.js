@@ -9,7 +9,11 @@
 */
 
 function fibonacci(n) {
-    // Напишите код здесь
+    let numbers = [0, 1];
+    for (i = 0; i < n; i++) {
+        numbers.push(numbers[i] + numbers[i+1]);
+    };
+return numbers[n-1];
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
