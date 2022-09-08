@@ -14,7 +14,11 @@
 */
 
 function palindrome(str) {
-str.toLowerCase();
+str = str.toLowerCase();
+str = str.replace(/[&\/\\#,+()$~%.'":*?<>{}! ]/g, '');
+if (str.length <= 1) {
+    return true;
+}
 for (let i = 0; i < parseInt(str.length/2, 10); i++) 
 if (str[i]===str[str.length-1-i]) {
     return true;
