@@ -10,8 +10,19 @@
 */
 
 function isPrime(n) {
-    // Напишите код здесь
-}
+    if (n > 1 && n % n === 0) {
+        for (let i = 2; i <= 10; i++) {
+          if (i === n || n % i !== 0) {
+            continue;
+          } else {
+            return false;
+          };
+        };
+        return true;
+      } else {
+        return false;
+      }
+  }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
 
