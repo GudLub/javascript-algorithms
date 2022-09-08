@@ -8,7 +8,19 @@
 */
 
 function uniq(arr) {
-    // Напишите код здесь
+    arr.sort(function (a, b) {
+        return a - b;
+    });
+    let result = [];
+    for (i = 0; i < arr.length - 1; i++) {
+        if (arr[i] !== arr[i + 1]) {
+            result.push(arr[i]);
+        };
+    };
+    if (arr[arr.length - 1] !== arr[arr.length - 2]) {
+        result.push(arr[arr.length - 1]);
+    };
+    return result;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
