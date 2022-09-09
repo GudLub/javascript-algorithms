@@ -11,6 +11,9 @@
 function anagram (str1, str2) {
     str1 = str1.toLowerCase();
     str2 = str2.toLowerCase();
+    if (str1 === str2) {
+        return false;
+    } else {
     str1 = str1.split('').sort().join('');
     str2 = str2.split('').sort().join('');
     if (str1 === str2) {
@@ -18,6 +21,7 @@ function anagram (str1, str2) {
     } else {
         return false;
     }   
+}
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
