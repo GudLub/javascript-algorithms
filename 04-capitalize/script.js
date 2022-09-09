@@ -7,10 +7,16 @@
 */
 
 function capitalize (str) {
-    let arr = str.split(' ');
+    const arr = str.trim().split(' ');
+    const result = [];
     for (i = 0; i < arr.length; i++)
-    arr[i] = arr[i][0].toUpperCase() + arr[i].slice(1); 
-    return arr.join(' ');
+    if (arr[i] !== '') {
+    arr[i] = arr[i][0].toUpperCase() + arr[i].slice(1);
+    result.push(arr[i]);
+    } else {
+        return str;
+    }
+    return result.join(' ');
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
