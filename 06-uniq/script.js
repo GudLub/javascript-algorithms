@@ -11,7 +11,7 @@ function uniq(arr) {
     arr.sort(function (a, b) {
         return a - b;
     });
-    let result = [];
+    const result = [];
     for (i = 0; i < arr.length - 1; i++) {
         if (arr[i] !== arr[i + 1]) {
             result.push(arr[i]);
